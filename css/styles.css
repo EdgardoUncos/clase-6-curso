@@ -1,0 +1,94 @@
+.caja {
+  background-color: red;
+  border: 2px solid black;
+  font-size: 3rem;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 400px);
+
+  /* row-gap: 20px;
+  column-gap: 40px; */
+
+  /* gap: 20px; */
+
+  /* Posicionar elementos dentro de la grilla */
+  /* justify-items: center;
+  align-items: center; */
+
+  justify-content: center;
+}
+
+.caja-posicionada {
+  background-color: aqua;
+
+  grid-column: 2 / 3; 
+
+  grid-row: 1/2;
+
+  /* Posicionar elemento de manera individual */
+  /* justify-self:center; */
+  /* align-self:center;  */
+}
+
+.grids-nosotros {
+  display: grid;
+
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 15vh repeat(2, 50vh) 10vh;
+
+  grid-template-areas:
+    "nav header header"
+    "nav main main"
+    "nav main main"
+    "none footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: blueviolet;
+}
+
+nav {
+  grid-area: nav;
+  background-color: aquamarine;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 50% 50%;
+
+  grid-template-areas:
+    "noticias aside"
+    "ubicacion aside";
+}
+
+.seccion-noticias {
+  background-color: cadetblue;
+  grid-area: noticias;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-ubicacion {
+  background-color: darkblue;
+  color: white;
+  grid-area: ubicacion;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+  background-color: red;
+}
